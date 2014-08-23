@@ -1,0 +1,70 @@
+/* line 1, ../src/styles/app.sass */
+* {
+  box-sizing: Border-box;
+}
+
+/* line 4, ../src/styles/app.sass */
+body {
+  -webkit-font-smoothing: antialiased;
+  color: #555555;
+  font-family: sans-serif;
+  margin: 0;
+  background: black;
+}
+
+/* line 11, ../src/styles/app.sass */
+.pull-right {
+  float: right;
+}
+
+/* line 14, ../src/styles/app.sass */
+.pull-left {
+  float: left;
+}
+
+/* line 17, ../src/styles/app.sass */
+.header {
+  padding: 10px;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background: #0091ea;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+/* line 25, ../src/styles/app.sass */
+.tiles-container {
+  list-style-type: none;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+/* line 30, ../src/styles/app.sass */
+.tiles-container .tile {
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+/* line 37, ../src/styles/app.sass */
+.slowFade-enter {
+  opacity: 0.01;
+  transition: opacity 1s ease-in;
+}
+
+/* line 41, ../src/styles/app.sass */
+.slowFade-enter.slowFade-enter-active {
+  opacity: 1;
+}
+
+/* line 44, ../src/styles/app.sass */
+.slowFade-leave {
+  opacity: 0.01;
+  transition: opacity 10s ease-in;
+}
+
+/* line 48, ../src/styles/app.sass */
+.slowFade-leave.slowFade-leave-active {
+  opacity: 1;
+}

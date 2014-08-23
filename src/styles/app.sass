@@ -1,0 +1,49 @@
+*
+	box-sizing: Border-box
+
+body
+	-webkit-font-smoothing: antialiased
+	color: #555
+	font-family: sans-serif
+	margin: 0
+	background: #000000
+
+.pull-right
+	float: right
+
+.pull-left
+	float: left
+
+.header
+	padding: 10px
+	position: fixed
+	height: 50px
+	width: 100%
+	background: #0091ea
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26)
+
+.tiles-container
+	list-style-type: none
+	margin: 50px 0 0 0
+	padding: 0
+
+	.tile
+		float: left
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: 100% 100%
+		background-size: cover
+
+.slowFade-enter
+	opacity: 0.01
+	transition: opacity 1s ease-in
+
+.slowFade-enter.slowFade-enter-active
+	opacity: 1
+
+.slowFade-leave
+	opacity: 0.01
+	transition: opacity 10s ease-in
+
+.slowFade-leave.slowFade-leave-active
+	opacity: 1

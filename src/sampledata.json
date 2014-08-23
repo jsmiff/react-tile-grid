@@ -1,0 +1,32 @@
+[
+	{
+		"ID":1,
+		"Name":"Immanuel Kant",
+		"Image":"img/kant.png",
+		"Rank":100
+	},
+	{
+		"ID":2,
+		"Name":"Simone De Beauvoir",
+		"Image":"img/beauvoir.png",
+		"Rank":200
+	},
+	{
+		"ID":3,
+		"Name":"Friedrich Nietzsche",
+		"Image":"img/nietzsche.png",
+		"Rank":300
+	},
+	{
+		"ID":4,
+		"Name":"G. W. F. Hegel",
+		"Image":"img/hegel.png",
+		"Rank":400
+	},
+	{
+		"ID":5,
+		"Name":"Marcus Aurelius",
+		"Image":"img/aurelius.png",
+		"Rank":500
+	}
+]

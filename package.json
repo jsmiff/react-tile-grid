@@ -1,0 +1,57 @@
+{
+  "name": "tile-view",
+  "version": "0.1.0",
+  "description": "ReactJS Tile Grid",
+  "browser": {
+    "underscore": "backbone/node_modules/underscore",
+    "plugin": "./src/scripts/vendor/jquery-plugin.js"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
+  "devDependencies": {
+    "browser-sync": "~0.8.2",
+    "browserify": "~3.36.0",
+    "browserify-shim": "~3.4.1",
+    "connect": "~2.14.3",
+    "glob": "^4.0.2",
+    "gulp": "*",
+    "gulp-browserify": "^0.5.0",
+    "gulp-changed": "~0.3.0",
+    "gulp-compass": "~1.1.8",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-karma": "0.0.4",
+    "gulp-notify": "~1.2.4",
+    "gulp-open": "~0.2.8",
+    "gulp-react": "^0.3.3",
+    "gulp-util": "~2.2.14",
+    "jquery": "^2.1.1",
+    "karma": "^0.12.16",
+    "karma-browserify": "^0.2.1",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
+    "karma-safari-launcher": "^0.1.1",
+    "pretty-hrtime": "~0.2.1",
+    "react-test-utils": "0.0.1",
+    "reactify": "^0.13.1",
+    "underscore": "^1.6.0",
+    "vinyl-source-stream": "~0.1.1",
+    "watchify": "~0.10.1"
+  },
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.0",
+    "react": "~0.11"
+  }
+}
