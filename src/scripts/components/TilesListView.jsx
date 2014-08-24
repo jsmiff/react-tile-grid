@@ -67,7 +67,8 @@ module.exports = React.createClass({
 
 			// create each individual tile
 			tiles = tiles.map(function (model) {
-	if(model.get("Name").toLowerCase().indexOf(that.props.filterText.toLowerCase()) > -1) {
+
+				if(model.get("Name").toLowerCase().indexOf(that.props.filterText.toLowerCase()) > -1) {
 
 					return (
 							<TileView windowWidth={that.state.width} windowHeight={that.state.height} key={model.cid} model={model} />

@@ -47,24 +47,24 @@ body {
   background-size: cover;
 }
 
-/* line 37, ../src/styles/app.sass */
+/* line 38, ../src/styles/app.sass */
 .slowFade-enter {
   opacity: 0.01;
   transition: opacity 1s ease-in;
 }
 
-/* line 41, ../src/styles/app.sass */
+/* line 42, ../src/styles/app.sass */
 .slowFade-enter.slowFade-enter-active {
   opacity: 1;
 }
 
-/* line 44, ../src/styles/app.sass */
+/* line 45, ../src/styles/app.sass */
 .slowFade-leave {
-  opacity: 0.01;
-  transition: opacity 10s ease-in;
+  opacity: 1;
+  transition: opacity 1s ease-in;
 }
 
-/* line 48, ../src/styles/app.sass */
+/* line 49, ../src/styles/app.sass */
 .slowFade-leave.slowFade-leave-active {
-  opacity: 1;
+  opacity: 0.01;
 }

@@ -24,14 +24,14 @@ var GridApp = React.createClass({
     this.setState({
       filterText: filterText
     });
+
+    this.forceUpdate();
   },
 
   handleSortChange: function(sort) {
     this.setState({
       sort: sort
     });
-
-    this.forceUpdate();
   },
 
   render: function() {
