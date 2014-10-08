@@ -1,0 +1,18 @@
+/* line 1, ../src/styles/headerView.sass */
+.header {
+  padding: 20px 20px;
+  position: fixed;
+  width: 100%;
+  background: #00080e;
+  border-bottom: 1px solid #228dff;
+  z-index: 1000;
+}
+/* line 9, ../src/styles/headerView.sass */
+.header .brand {
+  font-size: 16px;
+  margin: 0px;
+}
+/* line 14, ../src/styles/headerView.sass */
+.header #filterForm input, .header #filterForm .btn {
+  margin-left: 10px;
+}

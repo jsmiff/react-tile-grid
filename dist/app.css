@@ -1,70 +1,212 @@
-/* line 1, ../src/styles/app.sass */
-* {
-  box-sizing: Border-box;
-}
-
-/* line 4, ../src/styles/app.sass */
-body {
-  -webkit-font-smoothing: antialiased;
-  color: #555555;
-  font-family: sans-serif;
-  margin: 0;
-  background: black;
-}
-
-/* line 11, ../src/styles/app.sass */
-.pull-right {
-  float: right;
-}
-
-/* line 14, ../src/styles/app.sass */
-.pull-left {
-  float: left;
-}
-
-/* line 17, ../src/styles/app.sass */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+/* line 1, ../src/styles/headerView.sass */
 .header {
-  padding: 10px;
+  padding: 20px 20px;
   position: fixed;
-  height: 50px;
   width: 100%;
-  background: #0091ea;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  background: #00080e;
+  border-bottom: 1px solid #228dff;
+  z-index: 1000;
+}
+/* line 9, ../src/styles/headerView.sass */
+.header .brand {
+  font-size: 16px;
+  margin: 0px;
+}
+/* line 14, ../src/styles/headerView.sass */
+.header #filterForm input, .header #filterForm .btn {
+  margin-left: 10px;
 }
 
-/* line 25, ../src/styles/app.sass */
+/* line 1, ../src/styles/tilesListView.sass */
 .tiles-container {
   list-style-type: none;
-  margin: 50px 0 0 0;
+  margin: 70px 0 0 0;
   padding: 0;
 }
-/* line 30, ../src/styles/app.sass */
+/* line 6, ../src/styles/tilesListView.sass */
 .tiles-container .tile {
+  position: relative;
   float: left;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
   background-size: cover;
+  cursor: pointer;
+  border: 1px solid black;
+}
+/* line 16, ../src/styles/tilesListView.sass */
+.tiles-container .tile footer {
+  background: #444444;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  color: white;
 }
 
-/* line 38, ../src/styles/app.sass */
+/* line 7, ../src/styles/app.sass */
+* {
+  box-sizing: Border-box;
+}
+
+/* line 10, ../src/styles/app.sass */
+body {
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  margin: 0;
+  background: black;
+}
+
+/* line 18, ../src/styles/app.sass */
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 26, ../src/styles/app.sass */
+h1, h2, h3, h4, h5, h5 {
+  margin: 10px 0;
+}
+
+/* line 29, ../src/styles/app.sass */
+input {
+  border: none;
+  padding: 6px;
+  min-width: 200px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 35, ../src/styles/app.sass */
+button {
+  background: #228dff;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  line-height: 16px;
+  border-radius: 2px;
+}
+
+/* line 44, ../src/styles/app.sass */
+button:active,
+button:hover {
+  background: #55a7ff;
+}
+
+/* line 48, ../src/styles/app.sass */
+.large-button {
+  min-width: 200px;
+  padding: 14px 20px;
+  font-size: 16px;
+}
+
+/* line 53, ../src/styles/app.sass */
+.pull-right {
+  float: right;
+}
+
+/* line 56, ../src/styles/app.sass */
+.pull-left {
+  float: left;
+}
+
+/* line 59, ../src/styles/app.sass */
+.circle-avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-position: center center;
+  background-size: contain;
+}
+
+/* line 66, ../src/styles/app.sass */
+.full-screen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1005;
+}
+
+/* line 75, ../src/styles/app.sass */
+.side-screen-modal {
+  color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  z-index: 1005;
+}
+
+/* line 85, ../src/styles/app.sass */
+.mt-50 {
+  margin-top: 50px;
+}
+
+/* line 88, ../src/styles/app.sass */
+.p-50 {
+  padding: 50px;
+}
+
+/* line 91, ../src/styles/app.sass */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 99, ../src/styles/app.sass */
+.clearfix {
+  display: inline-block;
+}
+
+/* line 102, ../src/styles/app.sass */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 105, ../src/styles/app.sass */
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 111, ../src/styles/app.sass */
 .slowFade-enter {
   opacity: 0.01;
   transition: opacity 1s ease-in;
 }
 
-/* line 42, ../src/styles/app.sass */
+/* line 115, ../src/styles/app.sass */
 .slowFade-enter.slowFade-enter-active {
   opacity: 1;
 }
 
-/* line 45, ../src/styles/app.sass */
+/* line 118, ../src/styles/app.sass */
 .slowFade-leave {
   opacity: 1;
   transition: opacity 1s ease-in;
 }
 
-/* line 49, ../src/styles/app.sass */
+/* line 122, ../src/styles/app.sass */
 .slowFade-leave.slowFade-leave-active {
   opacity: 0.01;
 }

@@ -1,23 +1,45 @@
 /** @jsx React.DOM */
 'use strict';
 
-var React   = require('react/addons');
+var React = require('react/addons');
+
+// Router
+var Router = require('react-router');
+var Route = Router.Route;
+var Routes = Router.Routes;
+var DefaultRoute = Router.DefaultRoute;
+
+// Backbone
 var Backbone = require("backbone");
 Backbone.$ = window.$ = require("jquery")
 
-var Header = require ('./components/HeaderView');
+// Views
+var HeaderView = require ('./components/HeaderView');
 var TilesListView = require ('./components/TilesListView');
+var ProfileView = require ('./components/ProfileView');
+
+// Stores
+var TilesStore = require('./stores/tilesStore');
 
 /**
  * Top level component that contains all other elements for grid
  */
 var GridApp = React.createClass({
 
+  componentDidMount: function() {
+
+  },
+
   getInitialState: function() {
+
+    // demo only
+    TilesStore.demoTileEntry();
+
     return {
       filterText: '',
       sort: "Name"
     };
+
   },
 
   handleFilterChange: function(filterText) {
@@ -38,7 +60,7 @@ var GridApp = React.createClass({
 
     return (
       <div style={{overflow: 'hidden'}}>
-        <Header
+        <HeaderView
           filterText={this.state.filterText}
           sort={this.state.sort}
           setFilter={this.handleFilterChange}
@@ -49,6 +71,9 @@ var GridApp = React.createClass({
           sort={this.state.sort}
           tiles={this.props.tiles}
         />
+
+        {this.props.activeRouteHandler()}
+
       </div>
     );
 
@@ -56,39 +81,12 @@ var GridApp = React.createClass({
 
 });
 
-var tilesCollection = Backbone.Collection.extend({
-  url: "sampledata.json",
-});
+var routes = (
+  <Route path="/" tiles={TilesStore.tiles} handler={GridApp}>
 
-var tiles = new tilesCollection();
+    <Route name="profile" path="profile/:id" handler={ProfileView}/>
 
-/*
- * Demo tiles being added and animating in
- * IRL this will happen from a remote data source
- */
-var tilesToAdd = [{
-  "ID":6,
-  "Name":"Karl Marx",
-  "Image":"img/marx.png",
-  "Rank":600
-},
-{
-  "ID":7,
-  "Name":"Rene Descartes",
-  "Image":"img/descartes.png",
-  "Rank":700
-},
-{
-  "ID":8,
-  "Name":"Frantz Fanon",
-  "Image":"img/fanon.png",
-  "Rank":800
-}];
+  </Route>
+);
 
-tilesToAdd.forEach(function(tile, index) {
-
-  setTimeout(function() { tiles.add(tile)}, (index + 1) * 2500);
-
-});
-
-React.renderComponent(<GridApp tiles={tiles} />, document.getElementById('app'));
+React.renderComponent(<Routes children={routes}/>, document.getElementById('app'));

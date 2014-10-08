@@ -46,12 +46,16 @@ module.exports = React.createClass({
 		componentDidMount: function() {
 			window.addEventListener("resize", this.updateDimensions);
 
-			this.props.tiles.fetch({update: true, remove: true});
+			this.fetchTiles();
 		},
 
     componentWillUnmount: function() {
         window.removeEventListener("resize", this.updateDimensions);
     },
+
+		fetchTiles: function() {
+			this.props.tiles.fetch({update: true, remove: true});
+		},
 
 		render: function() {
 
@@ -80,11 +84,9 @@ module.exports = React.createClass({
 
 			return (
 				<ul className='tiles-container'>
-
-					<ReactCSSTransitionGroup transitionName='slowFade'>
+					<ReactCSSTransitionGroup transitionName="slowFade">
 						{tiles}
 					</ReactCSSTransitionGroup>
-
 				</ul>
 			);
 

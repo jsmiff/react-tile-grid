@@ -3,30 +3,30 @@
 		"ID":1,
 		"Name":"Immanuel Kant",
 		"Image":"img/kant.png",
-		"Rank":100
+		"Birth":1724
 	},
 	{
 		"ID":2,
 		"Name":"Simone De Beauvoir",
 		"Image":"img/beauvoir.png",
-		"Rank":200
+		"Birth":1908
 	},
 	{
 		"ID":3,
 		"Name":"Friedrich Nietzsche",
 		"Image":"img/nietzsche.png",
-		"Rank":300
+		"Birth":1844
 	},
 	{
 		"ID":4,
 		"Name":"G. W. F. Hegel",
 		"Image":"img/hegel.png",
-		"Rank":400
+		"Birth":1770
 	},
 	{
 		"ID":5,
 		"Name":"Marcus Aurelius",
 		"Image":"img/aurelius.png",
-		"Rank":500
+		"Birth":121
 	}
 ]

@@ -16,28 +16,29 @@ module.exports = React.createClass({
 		this.props.setSort("Name");
 	},
 
-	handleRankSortClick: function(e) {
+	handleBirthSortClick: function(e) {
 		e.preventDefault();
-		this.props.setSort("Rank");
+		this.props.setSort("Birth");
 	},
 
 	render: function () {
 		return (
-			<div className="header">
-				<form>
-					<input
-              type="text"
-              placeholder="Search..."
-              value={this.props.filterText}
-              ref="filterTextInput"
-              onChange={this.handleFilterChange}
-          />
-					<button className="btn"
+			<div className="header clearfix">
+				<h1 className="brand pull-left">Tile Grid</h1>
+				<form id="filterForm" className="pull-right">
+					<button className="btn noselect"
 						onClick={this.handleNameSortClick}
 					>Sort by Name</button>
-					<button className="btn"
-						onClick={this.handleRankSortClick}
-					>Sort by Rank</button>
+					<button className="btn noselect"
+						onClick={this.handleBirthSortClick}
+					>Sort by Birth Year</button>
+					<input
+							type="text"
+							placeholder="Search..."
+							value={this.props.filterText}
+							ref="filterTextInput"
+							onChange={this.handleFilterChange}
+					/>
 				</form>
 			</div>
 		);
