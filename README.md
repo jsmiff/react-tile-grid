@@ -8,12 +8,12 @@ A react tile grid that implements:
 * Search
 * Sorting
 * Animations
+* React Router
 
 It wants:
 
 * Forever scroll
 * Unit tests like whoa
-* More style ;)
 
 ## Example
 
@@ -21,6 +21,7 @@ It wants:
 
 ## Technologies
 
+* React
 * Backbone (collections)
 * Browserify
 * Gulp
