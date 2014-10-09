@@ -13,7 +13,6 @@ A react tile grid that implements:
 It wants:
 
 * Forever scroll
-* Unit tests like whoa
 
 ## Example
 
@@ -39,8 +38,6 @@ $ gem install compass
 ```bash
 $ gulp
 ```
-
-Visit http://localhost:8080.
 
 ## Thanks
 greypants' has an amazing gulp setup  @ https://github.com/greypants/gulp-starter

@@ -11,7 +11,7 @@ var DefaultRoute = Router.DefaultRoute;
 
 // Backbone
 var Backbone = require("backbone");
-Backbone.$ = window.$ = require("jquery")
+Backbone.$ = window.$ = require("jquery");
 
 // Views
 var HeaderView = require ('./components/HeaderView');

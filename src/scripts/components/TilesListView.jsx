@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 'use strict';
 
-var React   = require('react/addons');
+var React = require('react/addons');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var TileView = require ('./TileView');
@@ -36,17 +36,21 @@ module.exports = React.createClass({
 		},
 
 		updateDimensions: function() {
-				this.setState({width: $(window).width(), height: $(window).height()});
+			this.setState({width: $(window).width(), height: $(window).height()});
 		},
 
 		componentWillMount: function() {
-				this.updateDimensions();
+
+			this.fetchTiles();
+
+			this.updateDimensions();
+			
 		},
 
 		componentDidMount: function() {
 			window.addEventListener("resize", this.updateDimensions);
 
-			this.fetchTiles();
+
 		},
 
     componentWillUnmount: function() {

@@ -1,21 +1,25 @@
 /** @jsx React.DOM */
 
-var React = require('react');
-require('react-test-utils');
+var React = require('react/addons');
+var TileView = require('../src/scripts/components/TileView');
+var TilesStore = require('../src/scripts/stores/tilesStore');
 
-var TileView = require('../src/scripts/components/TileView')
+// Backbone
+var Backbone = require("backbone");
+Backbone.$ = window.$ = require("jquery");
 
-var ReactTestUtils;
+describe("TileView Tests",function(){
 
-describe("Tile View Test",function(){
+		it("Footer renders name", function () {
 
-		beforeEach(function() {
-				ReactTestUtils = React.addons.ReactTestUtils;
-		});
+				var model = new Backbone.Model({
+					Name: "John Doe"
+				});
 
-		it("Check Text Assignment", function () {
+				var instance = <TileView model={model} />
+				var component = React.addons.TestUtils.renderIntoDocument(instance);
 
-				expect(true).toBe(true);
+				expect($(component.getDOMNode()).find('footer').html()).toBe('John Doe');
 
 		});
 
