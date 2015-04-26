@@ -12,9 +12,9 @@ module.exports = React.createClass({
   },
 
   getTileWidth: function() {
-    var windowWidth = this.props.windowWidth; // TODO get container width to remove need for parentPadding
-    var tileWidth = this.props.windowWidth / 5;
     var parentPadding = 10;
+    var windowWidth = this.props.windowWidth; // TODO get container width to remove need for parentPadding
+    var tileWidth = (this.props.windowWidth  - parentPadding) / 5;
 
     if(windowWidth <= 1024) {
       tileWidth = (this.props.windowWidth - parentPadding) / 4;
@@ -42,7 +42,7 @@ module.exports = React.createClass({
       width: (this.getTileWidth() - 10) + 'px',
       margin: '5px',
       height: tileHeight + 'px',
-      border: "1px solid #efefef"
+      //border: "1px solid #efefef"
     };
     return (
       <li onClick={this.openDetails} style={tileStyle} className='tile' key={this.props.model.get('id')}></li>
