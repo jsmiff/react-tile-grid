@@ -1,43 +1,31 @@
-react-tile-grid
-============
+# React Tile Grid
 
-# About
+React 0.13.2  
+React Router 0.13.2
 
-A react tile grid that implements:
+## About
 
-* Search
-* Sorting
-* Animations
+A tile grid that serves as a starter UI for projects that have a largely tile based layout. Implements:
+
+* React CSS Transitions
 * React Router
+* ES6
+* Webpack
 
-It wants:
-
-* Forever scroll
+Uses a modified version of the wonderful [Gulp Starter Kit](https://github.com/greypants/gulp-starter/tree/2.0)
 
 ## Example
 
 [Demo](http://iamjsmith.com/react-tile-grid/)
 
-## Technologies
-
-* React
-* Backbone (collections)
-* Browserify
-* Gulp
-
-
 # Usage
-## Install
+### Install
 ```bash
 $ npm install
-$ gem update --system
-$ gem install compass
+
 ```
 
-## Run
+### Run
 ```bash
 $ gulp
 ```
-
-## Thanks
-greypants' has an amazing gulp setup  @ https://github.com/greypants/gulp-starter

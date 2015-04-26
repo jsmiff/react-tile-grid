@@ -1,19 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 /* line 1, ../src/styles/headerView.sass */
 .header {
-  padding: 20px 20px;
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
-  background: #00080e;
+  background: white;
   border-bottom: 1px solid #228dff;
   z-index: 1000;
+  line-height: 30px;
 }
-/* line 9, ../src/styles/headerView.sass */
+/* line 10, ../src/styles/headerView.sass */
 .header .brand {
   font-size: 16px;
   margin: 0px;
 }
-/* line 14, ../src/styles/headerView.sass */
+/* line 15, ../src/styles/headerView.sass */
 .header #filterForm input, .header #filterForm .btn {
   margin-left: 10px;
 }
@@ -21,10 +22,11 @@
 /* line 1, ../src/styles/tilesListView.sass */
 .tiles-container {
   list-style-type: none;
-  margin: 70px 0 0 0;
-  padding: 0;
+  margin: 50px 0 0 0;
+  padding: 10px 20px;
+  overflow: hidden;
 }
-/* line 6, ../src/styles/tilesListView.sass */
+/* line 7, ../src/styles/tilesListView.sass */
 .tiles-container .tile {
   position: relative;
   float: left;
@@ -33,18 +35,18 @@
   background-size: 100% 100%;
   background-size: cover;
   cursor: pointer;
-  border: 1px solid black;
+  padding: 10px;
 }
-/* line 16, ../src/styles/tilesListView.sass */
+/* line 17, ../src/styles/tilesListView.sass */
 .tiles-container .tile footer {
-  background: #444444;
+  background: white;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
   padding: 4px;
-  color: white;
+  color: black;
 }
 
 /* line 7, ../src/styles/app.sass */
@@ -55,11 +57,11 @@
 /* line 10, ../src/styles/app.sass */
 body {
   -webkit-font-smoothing: antialiased;
-  color: white;
+  color: #228dff;
   font-family: "Open Sans", sans-serif;
   font-weight: 200;
   margin: 0;
-  background: black;
+  background: white;
 }
 
 /* line 18, ../src/styles/app.sass */
@@ -79,7 +81,7 @@ h1, h2, h3, h4, h5, h5 {
 
 /* line 29, ../src/styles/app.sass */
 input {
-  border: none;
+  border: 1px solid #efefef;
   padding: 6px;
   min-width: 200px;
   font-family: "Open Sans", sans-serif;
@@ -143,25 +145,26 @@ button:hover {
 .side-screen-modal {
   color: black;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 0%;
+  right: 0%;
   width: 90%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.96);
+  background: white;
   z-index: 1005;
+  border-left: 1px solid #888888;
 }
 
-/* line 85, ../src/styles/app.sass */
+/* line 86, ../src/styles/app.sass */
 .mt-50 {
   margin-top: 50px;
 }
 
-/* line 88, ../src/styles/app.sass */
+/* line 89, ../src/styles/app.sass */
 .p-50 {
   padding: 50px;
 }
 
-/* line 91, ../src/styles/app.sass */
+/* line 92, ../src/styles/app.sass */
 .clearfix:after {
   content: ".";
   display: block;
@@ -171,17 +174,17 @@ button:hover {
   height: 0;
 }
 
-/* line 99, ../src/styles/app.sass */
+/* line 100, ../src/styles/app.sass */
 .clearfix {
   display: inline-block;
 }
 
-/* line 102, ../src/styles/app.sass */
+/* line 103, ../src/styles/app.sass */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 105, ../src/styles/app.sass */
+/* line 106, ../src/styles/app.sass */
 .block-center {
   display: block;
   margin-left: auto;
@@ -189,24 +192,24 @@ button:hover {
   text-align: center;
 }
 
-/* line 111, ../src/styles/app.sass */
+/* line 112, ../src/styles/app.sass */
 .slowFade-enter {
   opacity: 0.01;
   transition: opacity 1s ease-in;
 }
 
-/* line 115, ../src/styles/app.sass */
+/* line 116, ../src/styles/app.sass */
 .slowFade-enter.slowFade-enter-active {
   opacity: 1;
 }
 
-/* line 118, ../src/styles/app.sass */
+/* line 119, ../src/styles/app.sass */
 .slowFade-leave {
   opacity: 1;
   transition: opacity 1s ease-in;
 }
 
-/* line 122, ../src/styles/app.sass */
+/* line 123, ../src/styles/app.sass */
 .slowFade-leave.slowFade-leave-active {
   opacity: 0.01;
 }

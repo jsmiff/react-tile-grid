@@ -1,10 +1,11 @@
 /* line 1, ../src/styles/tilesListView.sass */
 .tiles-container {
   list-style-type: none;
-  margin: 70px 0 0 0;
-  padding: 0;
+  margin: 50px 0 0 0;
+  padding: 10px 20px;
+  overflow: hidden;
 }
-/* line 6, ../src/styles/tilesListView.sass */
+/* line 7, ../src/styles/tilesListView.sass */
 .tiles-container .tile {
   position: relative;
   float: left;
@@ -13,16 +14,16 @@
   background-size: 100% 100%;
   background-size: cover;
   cursor: pointer;
-  border: 1px solid black;
+  padding: 10px;
 }
-/* line 16, ../src/styles/tilesListView.sass */
+/* line 17, ../src/styles/tilesListView.sass */
 .tiles-container .tile footer {
-  background: #444444;
+  background: white;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
   padding: 4px;
-  color: white;
+  color: black;
 }

@@ -1,11 +1,15 @@
-var gulp = require('gulp');
+var gulp     = require('gulp');
+var html     = require('../config/html');
+var iconFont = require('../config/iconFont');
+var images   = require('../config/images');
+var sass     = require('../config/sass');
+var fonts    = require('../config/fonts');
+var watch    = require('gulp-watch');
 
-gulp.task('watch', ['setWatch', 'browserSync'], function() {
-	gulp.watch('src/styles/**', ['compass']);
-	gulp.watch('src/img/**', ['images']);
-	gulp.watch('src/index.html', ['copy']);
-
-	// Note: The browserify task handles jsx recompiling with reactify
-	// gulp.watch('src/**/*.jsx', ['jsx']);
-
+gulp.task('watch', ['browserSync'], function() {
+  watch(images.src, function() { gulp.start('images'); });
+  watch(sass.src, function() { gulp.start('sass'); });
+  watch(iconFont.src, function() { gulp.start('iconFont'); });
+  watch(fonts.src, function() { gulp.start('fonts'); });
+  watch(html.watch, function() { gulp.start('html'); });
 });
